@@ -1,0 +1,44 @@
+.toggle {
+	@include size(var(--base-padding-left));
+	@include flex(center, center, column);
+
+	border-top: 1px solid var(--border);
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 0;
+	background-color: transparent;
+
+	@include media-max(768) {
+		@include size(70px);
+	}
+
+	&__line {
+		@include size(80%, 2px);
+
+		margin: 5px 0;
+		background-color: var(--dark);
+		transition: var(--default-transition);
+	}
+
+	&--active {
+
+		.toggle {
+
+			&__line {
+				
+				&:nth-child(1) {
+					transform: translateY(12px) rotateZ(45deg);
+				}
+
+				&:nth-child(2) {
+					transform: translateX(-100%);
+					opacity: 0;
+				}
+
+				&:nth-child(3) {
+					transform: translateY(-12px) rotateZ(-45deg);
+				}
+			}
+		}
+	}
+}

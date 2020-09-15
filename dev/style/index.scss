@@ -4,7 +4,12 @@
 @import 'typography/index';
 @import 'components/index';
 
+@import '../plugins/index';
 
+
+@import '../modules/components/index';
 @import '../modules/header/index';
 @import '../modules/footer/index';
 @import '../modules/main/index';
+
+@import 'plugins/index';

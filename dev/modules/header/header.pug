@@ -1,9 +1,13 @@
 mixin header
-	.headerh&attributes(attributes)
-		.hm-nav.hm-nav--primary
-			+hm-logo
-			+hm-menu
-			+hm-login
-		.hm-nav.hm-nav--second
-			+hm-search
-			+hm-submenu
+	header.header&attributes(attributes)
+		+nav
+		+aside
+		.slider.slider-header#slider-header
+			.slider__item(style="background-image: url('./img/header/1.jpg')")
+				+info
+			.slider__item(style="background-image: url('./img/header/2.jpg')")
+			.slider__item(style="background-image: url('./img/header/3.jpg')")
+			.slider__item(style="background-image: url('./img/header/4.jpg')")
+			.slider__item(style="background-image: url('./img/header/5.jpg')")
+			.slider__item(style="background-image: url('./img/header/6.jpg')")
+			.slider__item(style="background-image: url('./img/header/7.jpg')")

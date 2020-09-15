@@ -1,0 +1,19 @@
+.social {
+	@include flex($align-items: center);
+
+	&__link {
+		@include flex(center, center);
+		@include size(30px);
+
+		margin: 0 5px;
+		font-size: 20px;
+
+		&:hover,
+		&--active {
+
+			i {
+				color: var(--primary);
+			}
+		}
+	}
+}

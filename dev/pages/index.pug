@@ -1,61 +1,6 @@
 extends ../template/template.pug
 block content
-	+header
-	.main
-		.content.content--left
-			+wn-classification
-		.content.content--center
-			+wc-home-header
-			.content--main
-				.content__left
-					+ool-open-offers
-					+ip-classification-bar
-
-					+li-inplay-header
-					+li-inplay-league
-					+li-inplay-event-header
-					+li-inplay-event-table(2)
-
-					+li-inplay-league
-					+li-inplay-event-header(true).li-inplay__event-header--closed
-					+li-inplay-event-table(3)
-					
-					+li-inplay-league
-					+li-inplay-event-header.li-inplay__event-header--closed
-					+li-inplay-event-table(4)
-
-					+li-inplay-league
-					+li-inplay-event-header(true)
-					+li-inplay-event-table(5).li-inplay__event-table--column
-
-					+ha-highlights-additional(1)
-					+gl-market-table
-				.content__right
-					+tc-top-coupons(4)
-					+ha-highlights-additional(2)
-					+gl-market-table
-					+ip-market-league-2
-					+ip-market-body-big(2,false,3,false,true)
-					+ip-market-league-2
-					+ip-market-body-big(1,false,3,false,true)
-					+ip-market-league-2
-					+ip-market-body-big(2,false,3,false,true)
-					+ip-market-league-2
-					+ip-market-body-big(3,false,2,false,true)
-					+ha-highlights-additional(3)
-		.content.content--right.content--wide
-			+ip-control-3
-			+bw-betslip
-			+ib-info-banner(1)
-			+ib-info-banner(2)
-			+ib-info-banner(3)
-			+ha-highlights-additional(2)
-			+ip-market-body-big(2,false,1,false,true)
-			+ip-market-subheader(1, 1)
-			+ip-market-body-big(3,false,1,false,true)
-			+ip-market-subheader-v2(1, 1)
-			+ip-market-body-big(3,false,1,false,true)
-			+im-banners(1,"BlackJack")
-			+im-banners(2,"Roulette")
-			+im-banners(3,"Hi Lo")
-	+footer
+	.page
+		+header#header
+		+main
+		+footer#footer

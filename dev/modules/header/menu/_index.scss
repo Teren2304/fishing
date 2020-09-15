@@ -1,0 +1,22 @@
+.menu {
+	margin: 20px 0;
+
+	&__item {
+		display: block;
+		padding: 10px 0;
+		font-size: 36px;
+
+		&--active,
+		&:hover {
+			transform: translateX(10px);
+		}
+
+		@include media-max(992) {
+			font-size: 26px;
+		}
+
+		@include media-max(768) {
+			font-size: 20px;
+		}
+	}
+}

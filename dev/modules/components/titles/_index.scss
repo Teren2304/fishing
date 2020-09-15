@@ -1,0 +1,24 @@
+.titles {
+	position: relative;
+	padding-bottom: 5px;
+	margin-bottom: 40px;
+
+	&:after {
+		@include size(100px, 2px);
+
+		content: '';
+		position: absolute;
+		left: 50%;
+		bottom: 0;
+		transform: translateX(-50%);
+		background-color: var(--primary);
+	}
+
+	&__head {
+
+		@include media-max(768) {
+			font-size: 30px;
+		}
+	}
+}
+

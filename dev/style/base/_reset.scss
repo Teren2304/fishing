@@ -4,14 +4,31 @@ body{
 	min-width: $min-width;
 	position: relative;
 	text-transform: none;
-	color: $base-font-color;
-	line-height: $base-font-line-height;
-	font-family: $base-font-family;
-	font-weight: $base-font-weight;
-	font-size: $base-font-size!important;
-	background-color: $base-background-color;
+	color: var(--font-color);
+	line-height: var(--font-line-height);
+	font-family: var(--font-main);
+	font-weight: var(--font-weight);
+	font-size: var(--font-size)!important;
+	background-color: var(--base-background-color);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	
+	&::-webkit-scrollbar{
+		width: 8px
+	}
+	&::-webkit-scrollbar-corner{
+		background-color: #474747
+	}
+	&::-webkit-scrollbar-thumb{
+		border-radius: 19px;
+		border: 2px solid transparent;
+		background-color: #888;
+		background-clip: content-box;
+	}
+	&::-webkit-scrollbar-track{
+		background-color: #474747;
+		border: 1px solid #373737;
+	}
 }
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, 
@@ -66,7 +83,7 @@ label,
 a{
 	outline: none;
 	cursor: pointer;
-	transition: $default-transition;
+	transition: var(--default-transition);
 }
 select::-ms-expand{
 	display: none
@@ -87,7 +104,7 @@ form{
 	padding: 0;
 }
 a{
-	color: $base-font-color;
+	color: var(--font-color);
 	text-decoration: none;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }

@@ -1,18 +1,53 @@
 @mixin font{
 	font-style: 	normal;
-	font-size: 		$base-font-size;
-	font-family: 	$base-font-family;
-	font-weight: 	$base-font-weight;
-	color: 			$base-font-color;
-	line-height: 	$base-font-line-height;
+	font-size: 		var(--font-size);
+	font-family: 	var(--font-main);
+	font-weight: 	var(--font-weight);
+	color: 			var(--font-color);
+	line-height: 	var(--font-line-height);
 	text-transform: none;
 }
 
+@mixin scroll-y {
+	overflow-y: auto;
+	
+	&::-webkit-scrollbar{
+		width: 8px
+	}
+	&::-webkit-scrollbar-corner{
+		background-color: #474747
+	}
+	&::-webkit-scrollbar-thumb{
+		border-radius: 19px;
+		border: 2px solid transparent;
+		background-color: #888;
+		background-clip: content-box;
+	}
+	&::-webkit-scrollbar-track{
+		background-color: #474747;
+		border: 1px solid #373737;
+	}
+}
+
+@mixin placeholder($color){
+	&::-webkit-input-placeholder{
+		color: $color;
+	}
+	&::-moz-placeholder{
+		color: $color;
+	}
+	&:-ms-input-placeholder{
+		color: $color;
+	}
+}
+
 @mixin input{
+	@include placeholder(rgba(0,0,0,0.8));
+	
 	overflow: 	hidden;
 	width: 		100%;
 	padding: 	5px 10px;
-	height: 	$base-height;
+	height: 	var(--base-height);
 }
 
 @mixin size($width: null, $height: null){
@@ -83,24 +118,25 @@
 	transform: translateX(-50%);
 }
 
-@mixin flex($j-content: null, $a-content: null, $f-direction: null){
+@mixin flex($justify-content: null, $align-items: null, $flex-direction: null){
 	display: flex;
 
-	@if $j-content{
-		justify-content: $j-content;
+	@if $justify-content{
+		justify-content: $justify-content;
 	}
 
-	@if $a-content{
-		align-items: $a-content;
+	@if $align-items{
+		align-items: $align-items;
 	}
 
-	@if $f-direction{
-		flex-direction: $f-direction;
+	@if $flex-direction{
+		flex-direction: $flex-direction;
 	}
 }
 
 @mixin shadow($color: null){
 	position: relative;
+
 	&:before{
 		content: '';
 		position: absolute;
@@ -130,17 +166,5 @@
 @mixin media-min($minwidth){
 	@media only screen and (min-width: $minwidth+ "px"){
 		@content
-	}
-}
-
-@mixin placeholder($color){
-	&::-webkit-input-placeholder{
-		color: $color;
-	}
-	&::-moz-placeholder{
-		color: $color;
-	}
-	&:-ms-input-placeholder{
-		color: $color;
 	}
 }

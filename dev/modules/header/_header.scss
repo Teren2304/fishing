@@ -1,0 +1,45 @@
+.header {
+	@include flex($align-items: center);
+	
+	position: relative;
+	height: 100vh;
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+
+	@include media-max(768) {
+		padding-left: 0;
+	}
+
+	&:before {
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		background-color: rgba(0,0,0,0.2);
+		content: '';
+	}
+
+
+	.slider {
+		@include size(100%);
+
+		&__item {
+			@include flex($align-items: center);
+
+			padding-left: 150px;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+
+			@include media-max(768) {
+				padding-left: 20px;
+			}
+		}
+
+		.slick-dots {
+			bottom: 50px;
+		}
+	}
+}

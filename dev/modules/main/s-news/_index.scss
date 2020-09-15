@@ -1,0 +1,44 @@
+.s-news {
+
+	.img {
+		@include size(100%);
+
+		object-fit: cover;
+		display: block;
+		transition: var(--default-transition);
+	}
+
+	.article {
+		margin-bottom: 20px;
+
+		&__img {
+			@include size(100%, 250px);
+
+			display: block;
+			overflow: hidden;
+
+			&:hover,
+			&--active {
+				
+				.img {
+					transform: scale(1.2);
+				}
+			}
+		}
+
+		&__video {
+			@include size(100%, 250px);
+
+			display: block;
+		}
+
+		&__title {
+			display: block;
+
+			&:hover,
+			&--active {
+				color: var(--primary);
+			}
+		}
+	}
+}

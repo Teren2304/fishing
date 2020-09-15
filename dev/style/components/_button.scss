@@ -1,61 +1,46 @@
-.btn{
+.btn {
 	@include flex(center,center);
 	@include font;
 	@include input;
+	@include size(auto, 40px);
+
 	border: 0;
 	cursor: pointer;
+	border-radius: 2px;
+	padding: 0 20px;
+	position: relative;
 
-	&--primary{
-		background-color: $primary;
-		color: #fff;
-		* {
-			color: #fff;
-		}
+	&--dark {
+		background-color: var(--dark);
 	}
 
-
-	&--coff{
+	&--white {
 		background-color: #fff;
-		&:hover{
-			background-color: #f2f2f2;
+	}
+
+	& > * {
+		position: relative;
+		z-index: 1;
+	}
+
+	&:before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: var(--primary);
+		z-index: 0;
+		width: 0;
+		transition: var(--default-transition);
+		content: '';
+	}
+
+	&:hover,
+	&--active {
+		
+		&:before {
+			width: 100%;
 		}
-		&--active{
-			background-color: #4a4b4a;
-			.btn{
-				&__text{
-					color: #fff;
-				}
-			}
-		}
-	}
-
-	&--square{
-		@include size($base-height);
-	}
-
-	&--img{
-		padding-left: 5px;
-	}
-
-	&__name{
-		color: #000;
-		margin: 0 3px;
-	}
-	&__odds{
-		color: $primary;
-		font-weight: bold;
-		margin: 0 3px;
-	}
-	&__text{
-		color: #000;
-		margin: 0 3px;
-	}
-	&__text-e{
-		color: #000;
-		margin: 0 3px;
-		@include ellipsis;
-	}
-	&__img{
-		@include size(20px);
 	}
 }

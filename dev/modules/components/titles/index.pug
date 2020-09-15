@@ -1,0 +1,6 @@
+mixin titles(title, description)
+	.titles&attributes(attributes)
+		.text-center
+			h3.h3.titles__head= title
+			if (description)
+				p.titles__description= description

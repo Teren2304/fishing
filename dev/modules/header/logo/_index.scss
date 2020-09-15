@@ -1,0 +1,11 @@
+.logo {
+	@include size(var(--base-padding-left));
+	@include flex(center, center);
+	
+	background-color: var(--border);
+	padding: 5px;
+
+	@include media-max(768) {
+		@include size(70px);
+	}
+}

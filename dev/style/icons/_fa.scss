@@ -1,49 +1,70 @@
+$fa-font-path: '../fonts/FontAwesome';
+
 @font-face {
     font-family: "Font Awesome 5 Pro";
     font-style: normal;
     font-weight: 400;
     font-display: auto;
-    src: url(../fonts/FontAwesome/fa-regular-400.eot);
-    src: url(../fonts/FontAwesome/fa-regular-400.eot?#iefix) format("embedded-opentype"), 
-        url(../fonts/FontAwesome/fa-regular-400.woff2) format("woff2"), 
-        url(../fonts/FontAwesome/fa-regular-400.woff) format("woff"), 
-        url(../fonts/FontAwesome/fa-regular-400.ttf) format("truetype"), 
-        url(../fonts/FontAwesome/fa-regular-400.svg#fontawesome) format("svg")
+    src: url('#{$fa-font-path}/fa-regular-400.eot');
+    src: url('#{$fa-font-path}/fa-regular-400.eot?#iefix') format("embedded-opentype"), 
+        url('#{$fa-font-path}/fa-regular-400.woff2') format("woff2"), 
+        url('#{$fa-font-path}/fa-regular-400.woff') format("woff"), 
+        url('#{$fa-font-path}/fa-regular-400.ttf') format("truetype"), 
+        url('#{$fa-font-path}/fa-regular-400.svg#fontawesome') format("svg")
 }
+
 @font-face {
     font-family: "Font Awesome 5 Pro";
     font-style: normal;
     font-weight: 300;
     font-display: auto;
-    src: url(../fonts/FontAwesome/fa-light-300.eot);
-    src: url(../fonts/FontAwesome/fa-light-300.eot?#iefix) format("embedded-opentype"), 
-        url(../fonts/FontAwesome/fa-light-300.woff2) format("woff2"),
-        url(../fonts/FontAwesome/fa-light-300.woff) format("woff"),
-        url(../fonts/FontAwesome/fa-light-300.ttf) format("truetype"),
-        url(../fonts/FontAwesome/fa-light-300.svg#fontawesome) format("svg")
+    src: url('#{$fa-font-path}/fa-light-300.eot');
+    src: url('#{$fa-font-path}/fa-light-300.eot?#iefix') format("embedded-opentype"), 
+        url('#{$fa-font-path}/fa-light-300.woff2') format("woff2"),
+        url('#{$fa-font-path}/fa-light-300.woff') format("woff"),
+        url('#{$fa-font-path}/fa-light-300.ttf') format("truetype"),
+        url('#{$fa-font-path}/fa-light-300.svg#fontawesome') format("svg")
 }
+
 @font-face {
     font-family: "Font Awesome 5 Pro";
     font-style: normal;
     font-weight: 900;
     font-display: auto;
-    src: url(../fonts/FontAwesome/fa-solid-900.eot);
-    src: url(../fonts/FontAwesome/fa-solid-900.eot?#iefix) format("embedded-opentype"), 
-        url(../fonts/FontAwesome/fa-solid-900.woff2) format("woff2"), 
-        url(../fonts/FontAwesome/fa-solid-900.woff) format("woff"), 
-        url(../fonts/FontAwesome/fa-solid-900.ttf) format("truetype"), 
-        url(../fonts/FontAwesome/fa-solid-900.svg#fontawesome) format("svg")
+    src: url('#{$fa-font-path}fa-solid-900.eot');
+    src: url('#{$fa-font-path}fa-solid-900.eot?#iefix') format("embedded-opentype"), 
+        url('#{$fa-font-path}/fa-solid-900.woff2') format("woff2"), 
+        url('#{$fa-font-path}/fa-solid-900.woff') format("woff"), 
+        url('#{$fa-font-path}/fa-solid-900.ttf') format("truetype"), 
+        url('#{$fa-font-path}/fa-solid-900.svg#fontawesome') format("svg")
 }
+
+@font-face {
+    font-family: 'Font Awesome 5 Brands';
+    font-style: normal;
+    font-weight: 400;
+    font-display: auto;
+    src: url('#{$fa-font-path}/fa-brands-400.eot');
+    src: url('#{$fa-font-path}/fa-brands-400.eot?#iefix') format('embedded-opentype'),
+        url('#{$fa-font-path}/fa-brands-400.woff2') format('woff2'),
+        url('#{$fa-font-path}/fa-brands-400.woff') format('woff'),
+        url('#{$fa-font-path}/fa-brands-400.ttf') format('truetype'),
+        url('#{$fa-font-path}/fa-brands-400.svg#fontawesome') format('svg');
+}
+
 .fal {
     font-weight: 300
 }
+
 .far {
     font-weight: 400
 }
+
 .fal,
 .far {
     font-family: "Font Awesome 5 Pro"
 }
+
 .fa,
 .fas {
     font-family: "Font Awesome 5 Pro";
@@ -51,86 +72,47 @@
 }
 
 
-.fal{
-    font-size: 18px;
-    font-style: normal;
-    &.fa-star:after{
-        content: '\f005';
-    }
-    &.fa-angle-left:after{
-        content: '\f104';
-    }
-    &.fa-angle-right:after{
-        content: '\f105';
-    }
-    &.fa-angle-down:after{
-        content: '\f107';
-    }
-    &.fa-volume-up:after{
-        content: '\f028';
-    }
-    &.fa-times:after{
-        content: '\f00d';
-    }
-    &.fa-expand-alt:after{
-        content: '\f424';
-    }
-    &.fa-stopwatch:after{
-        content: '\f2f2';
-    }
-    &.fa-signa:after{
-         content: '\f012';
-    }
-    &.fa-thumb-tack:after{
-        content: '\f08d';
-    }
-    &.fa-home:after{
-        content: '\f015';
-    }
-    &.fa-newspaper:after{
-        content: '\f1ea';
-    }
-    &.fa-chevron-double-left:after{
-        content: '\f323';
-    }
-    &.fa-trophy:after{
-        content: '\f091';
-    }
-    &.fa-bell:after{
-        content: '\f0f3';
-    }
-    &.fa-tshirt:after{
-        content: '\f553';
-    }
-    &.fa-check-circle:after{
-        content: '\f058';
-    }
-    &.fa-envelope:after{
-        content: '\f0e0';
-    }
-    &.fa-user-circle:after{
-        content: '\f2bd';
-    }
-    &.fa-cog:after{
-        content: '\f013';
-    }
-    &.fa-redo:after{
-        content: '\f01e';
-    }
-}
 
 .far{
     font-size: 18px;
     font-style: normal;
-    &.fa-microphone-alt:after {
-        content: "\f3c9"
-    }
 }
 
 .fas{
     font-size: 18px;
     font-style: normal;
-    &.fa-star:after{
-        content: '\f005';
+}
+
+
+
+.fal {
+    font-size: 18px;
+    font-style: normal;
+
+    &.fa-quote-left {
+
+        &:after {
+            content: '\f10d';
+        }
+    }
+}
+
+.fab {
+  font-family: 'Font Awesome 5 Brands';
+  font-weight: 400;
+  font-style: normal;
+
+    &.fa-facebook-f {
+
+        &:after {
+            content: '\f39e';
+        }
+    }
+
+    &.fa-google-plus-g {
+
+        &:after {
+            content: '\f0d5';
+        } 
     }
 }

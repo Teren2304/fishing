@@ -1,46 +1,45 @@
 $font-color: (
-	'primary': 	$primary,
-	'second': 	$second,
-	'third': 	$third,
-	'fourth': 	$fourth,
-	'fifth': 	$fifth,
-	'sixth': 	$sixth,
-	'red': 		red,
-	'green': 	green,
-	'white':	$white,
-	'l-white':	$l-white,
-	'm-white':	$m-white,
-	'd-white':	$d-white
+	'primary': var(--primary),
+	'white':	#fff
 );
 
 $font-size: (
-	'xs': 10px,
+	'xs': 11px,
 	'sm': 12px,
 	'md': 16px,
 	'lg': 22px
 );
+
 $font-weight: (
 	'regular': 400,
+	'medium': 500,
 	'bold': 700
 );
-.font{
-	color: $base-font-color;
-	line-height: $base-font-line-height;
-	font-size: $base-font-size;
-	font-family: $base-font-family;
-	font-weight: $base-font-weight;
-	@each $status, $text-color in $font-color{
-		&--#{$status}{
+
+.font {
+	color: var(--font-color);
+	line-height: var(--font-line-height);
+	font-size: var(--font-size);
+	font-family: var(--font-main);
+	font-weight: var(--font-weight);
+
+	@each $status, $text-color in $font-color {
+
+		&--#{$status} {
 			color: $text-color;
 		}
 	}
-	@each $status, $text-weight in $font-weight{
-		&--#{$status}{
+
+	@each $status, $text-weight in $font-weight {
+
+		&--#{$status} {
 			font-weight: $text-weight;
 		}
 	}
-	@each $status, $text-size in $font-size{
-		&--#{$status}{
+
+	@each $status, $text-size in $font-size {
+
+		&--#{$status} {
 			font-size: $text-size;
 		}
 	}

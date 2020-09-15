@@ -1,16 +1,17 @@
 mixin footer
-	.footer&attributes(attributes)
-		+footer-notice
-		.footer__content
-			.text-center
-				p.font--white © 2001-2019 oddsbit.io All rights reserved.
-
-mixin footer-notice
-	.notice&attributes(attributes)
-		.notice__link
-			p Important note on information displayed and transmission delays
-		.notice__dropdown
-			.notice__close Close
-			p.font--bold Important Info
-			p Although every effort is made to ensure that information displayed on site with regards to an event is correct, it is to be used as a guide only. In the event of any particular information (score, time of game etc) being incorrect we assume no liability for this. Please refer to our betting rules for information on how we settle individual markets.
-			p For the purposes of In-Play betting, customers should be aware that transmissions described as live by some broadcasters including oddsbit.io Live Streaming may actually be delayed.  The extent of any delay may vary between customers, depending on the set-up through which they are receiving pictures or data.
+	footer.footer&attributes(attributes)
+		.container-fluid
+			.container
+				.row.align-middle.align-justify
+					.col-12.col-md-4.col-lg-4
+						.flex.align-center
+							p.font © 2020 is Powered by ...
+					.col-12.col-md-4.col-lg-2
+						.flex.align-center.mt-20.mb-20
+							+logo
+					.col-12.col-md-4.col-lg-4
+						.flex.align-center-middle.flex-wrap
+							p.font On social networks
+							+social
+						.text-center
+							+contact

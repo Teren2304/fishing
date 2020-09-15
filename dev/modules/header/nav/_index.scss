@@ -1,0 +1,18 @@
+.nav {
+	@include flex($justify-content: space-between, $flex-direction: column);
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: var(--base-padding-left);
+	background-color: #fff;
+	z-index: 3;
+
+	@include media-max(768) {
+		flex-direction: row;
+		bottom: auto;
+		right: 0;
+		width: 100%;
+	}
+}

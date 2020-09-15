@@ -1,0 +1,84 @@
+.s-features {
+
+	&__video {
+		@include size(700px, 390px);
+
+		display: block;
+		margin: 20px auto 50px;
+
+		@include media-max(992) {
+			@include size(500px, 280px);
+		}
+
+		@include media-max(576) {
+			@include size(100%, 280px);
+		}
+	}
+
+	&__item {
+		position: relative;
+		perspective: 1000px;
+		height: 400px;
+		cursor: pointer;
+
+		@include media-max(992) {
+			width: 100%;
+			max-width: 400px;
+			margin: 0 auto;
+		}
+
+		@include media-max(768) {
+			height: 350px;
+			margin-bottom: 20px;
+		}
+
+		@include media-max(576) {
+			height: 400px;
+		}
+
+		&:hover {
+
+			.s-features {
+
+				&__front {
+					transform: rotateY(180deg);
+				}
+
+				&__back {
+					transform: rotateY(360deg);
+				}
+			}
+		}
+
+		.icon {
+			@include size(40px);
+		}
+
+		.font {
+			margin-bottom: 5px;
+		}
+	}
+
+	&__front,
+	&__back {
+		@include size(100%);
+
+		position: absolute;
+		left: 0;
+		top: 0;
+		transition: var(--default-transition);
+		backface-visibility: hidden;
+	}
+
+	&__front {
+		@include flex(center, center);
+	}
+
+	&__back {
+		@include flex($justify-content: center, $flex-direction: column);
+
+		padding: 15px;
+		background-color: var(--dark);
+		transform: rotateY(180deg);
+	}
+}

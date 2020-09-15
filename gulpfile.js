@@ -39,6 +39,11 @@ var paths = {
         src: './dev/fonts/**/*',
         dest: './build/fonts',
         watch: './dev/fonts/**/*'
+    },
+    json: {
+        src: './dev/json/**/*',
+        dest: './build/json',
+        watch: './dev/json/**/*'
     }
 };
 
@@ -78,7 +83,7 @@ gulp.task('js', function () {
 gulp.task('img', function () {
     return gulp.src(paths.img.src)
         .pipe(plumber())
-        .pipe(imagemin())
+        // .pipe(imagemin())
         //.pipe(rename({ dirname: '' }))
         .pipe(gulp.dest(paths.img.dest));
 });
@@ -90,17 +95,26 @@ gulp.task('fonts', function () {
         .pipe(browserSync.reload({ stream: true }));
 });
 
+gulp.task('json', function () {
+    return gulp.src(paths.json.src)
+        .pipe(plumber())
+        .pipe(gulp.dest(paths.json.dest))
+        .pipe(browserSync.reload({ stream: true }));
+});
+
 gulp.task('server', function () {
     browserSync.init({
         server: { baseDir: paths.dirs.build },
         reloadOnRestart: true,
-        tunnel: 'remote'
+        tunnel: false,
+        host: "localhost"
     });
     gulp.watch(paths.html.watch, gulp.parallel('html'));
     gulp.watch(paths.css.watch, gulp.parallel('css'));
     gulp.watch(paths.js.watch, gulp.parallel('js'));
     gulp.watch(paths.img.watch, gulp.parallel('img'));
     gulp.watch(paths.fonts.watch, gulp.parallel('fonts'));
+    gulp.watch(paths.json.watch, gulp.parallel('json'));
 });
 
 
@@ -110,7 +124,8 @@ gulp.task('build', gulp.series(
     'css',
     'js',
     'img',
-    'fonts'
+    'fonts',
+    'json'
 ));
 
 gulp.task('dev', gulp.series(

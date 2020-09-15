@@ -1,0 +1,18 @@
+.slogan {
+	@include flex(center, center);
+
+	flex-grow: 1;
+
+	@include media-max(768) {
+		display: none;
+	}
+
+	&__text {
+		white-space: nowrap;
+		transform: rotateZ(-90deg);
+
+		@include media-max(768) {
+			transform: rotateZ(0);
+		}
+	}
+}

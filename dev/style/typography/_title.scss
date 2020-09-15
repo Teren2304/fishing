@@ -1,0 +1,51 @@
+$title-color: (
+	'primary': 	var(--primary),
+	'white':	#fff
+);
+
+$title-size: (
+	'1': 70px, 
+	'2': 55px,
+	'3': 48px,
+	'4': 40px,
+	'5': 32px,
+	'6': 25px
+);
+
+$title-weight: (
+	'medium': 500,
+	'bold': 700
+);
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6{
+	color: var(--font-color);
+	line-height: var(--font-line-height);
+	font-family: var(--font-alt);
+	font-weight: 400;
+	letter-spacing: 1px;
+	margin-bottom: 20px;
+
+	@each $status, $text-color in $title-color {
+		&--#{$status}{
+			color: $text-color;
+		}
+	}
+
+	@each $status, $text-weight in $font-weight {
+		&--#{$status}{
+			font-weight: $text-weight;
+		}
+	}
+}
+
+@each $index, $status in $title-size {
+	.h#{$index},
+	 h#{$index} {
+		font-size: $status;
+	}
+}
